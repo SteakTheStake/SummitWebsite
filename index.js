@@ -1,67 +1,64 @@
-gsap.registerPlugin(Observer);
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
 
-let sections = document.querySelectorAll("section"),
-  images = document.querySelectorAll(".bg"),
-  headings = gsap.utils.toArray(".section-heading"),
-  outerWrappers = gsap.utils.toArray(".outer"),
-  innerWrappers = gsap.utils.toArray(".inner"),
-  splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })),
-  currentIndex = -1,
-  wrap = gsap.utils.wrap(0, sections.length),
-  animating;
+const textArray = ["Imagination", "Possibilities", "Building", "Textures"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
 
-gsap.set(outerWrappers, { yPercent: 100 });
-gsap.set(innerWrappers, { yPercent: -100 });
-
-function gotoSection(index, direction) {
-  index = wrap(index); // make sure it's valid
-  animating = true;
-  let fromTop = direction === -1,
-    dFactor = fromTop ? -1 : 1,
-    tl = gsap.timeline({
-      defaults: { duration: 1.25, ease: "power1.inOut" },
-      onComplete: () => animating = false
-    });
-  if (currentIndex >= 0) {
-    // The first time this function runs, current is -1
-    gsap.set(sections[currentIndex], { zIndex: 0 });
-    tl.to(images[currentIndex], { yPercent: -15 * dFactor })
-      .set(sections[currentIndex], { autoAlpha: 0 });
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if (!cursorSpan.classList.contains("typing"))
+      cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } else {
+    cursorSpan.classList.remove("typing");
+    setTimeout(erase, newTextDelay);
   }
-  gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-  tl.fromTo([outerWrappers[index], innerWrappers[index]], {
-    yPercent: i => i ? -100 * dFactor : 100 * dFactor
-  }, {
-    yPercent: 0
-  }, 0)
-    .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
-    .fromTo(splitHeadings[index].chars, {
-      autoAlpha: 0,
-      yPercent: 150 * dFactor
-    }, {
-      autoAlpha: 1,
-      yPercent: 0,
-      duration: 1,
-      ease: "power2",
-      stagger: {
-        each: 0.02,
-        from: "random"
-      }
-    }, 0.2);
-
-  currentIndex = index;
 }
 
-Observer.create({
-  type: "wheel,touch,pointer",
-  wheelSpeed: -1,
-  onDown: () => !animating && gotoSection(currentIndex - 1, -1),
-  onUp: () => !animating && gotoSection(currentIndex + 1, 1),
-  tolerance: 10,
-  preventDefault: true
+function erase() {
+  if (charIndex > 0) {
+    if (!cursorSpan.classList.contains("typing"))
+      cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(
+      0,
+      charIndex - 1
+    );
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // On DOM Load initiate the effect
+  if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
-gotoSection(0, 1);
 
-// original: https://codepen.io/BrianCross/pen/PoWapLP
-// horizontal version: https://codepen.io/GreenSock/pen/xxWdeMK
+
+const mountainLeft = document.querySelector('#mountain_left');
+const mountainRight = document.querySelector('#mountain_right');
+const cloud1 = document.querySelector('#clouds_1');
+const cloud2 = document.querySelector('#clouds_2');
+const text = document.querySelector('#text');
+const man = document.querySelector('#man');
+
+window.addEventListener('scroll',()=>{
+  let value = scrollY;
+  mountainLeft.style.left = `-${value/0.7}px`
+  cloud2.style.left = `-${value*2}px`
+  mountainRight.style.left = `${value/0.7}px`
+  cloud1.style.left = `${value*2}px`
+  text.style.bottom = `-${value}px`;
+  man.style.height = `${window.innerHeight - value}px`
+})
