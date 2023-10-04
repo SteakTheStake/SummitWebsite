@@ -25,20 +25,21 @@
   <section>
     <img alt="Minecraft" id="logo" class="small_logo" src="content/img/Summit.png"/>
     <div id="flashingtext">Minecraft At Its Peak</div>
-      <button class="button singleplayer" style="visibility: hidden"><a href="index.html">Singleplayer</a></button>
-      <button class="button singleplayer">Singleplayer</button>
+      <button data-sound="click.ogg" class="button singleplayer soundButton"><a href="index.html">Singleplayer</a></button>
       <br>
-      <button class="button multiplayer">Multiplayer</button>
+      <button data-sound="click.ogg" class="button multiplayer soundButton"><a href="">Multiplayer</a></button>
       <br>
-      <button class="button button_small left" onclick="change()">Options</button>
-      <button class="button button_small right" onclick="quit();">Quit Game</button>
-
+      <button data-sound="click.ogg" class="button button_small left soundButton" onclick="change()"><a href="">Options</a></button>
+      <button data-sound="click.ogg" class="button button_small right soundButton" onclick="quit();"><a href="">Quit Game</a></button>
 
   </section>
   <section class="image2">
 
     <h3>COMING SOON</h3>
-
+    <audio controls style="visibility: hidden"><source id="click1" src="content/sounds/click.ogg" type="audio/ogg"></audio>
+    <audio controls style="visibility: hidden"><source id="click2" src="content/sounds/click.ogg" type="audio/ogg"></audio>
+    <audio controls style="visibility: hidden"><source id="click3" src="content/sounds/click.ogg" type="audio/ogg"></audio>
+    <audio controls style="visibility: hidden"><source id="click4" src="content/sounds/click.ogg" type="audio/ogg"></audio>
   </section>
     <footer class="bottom-div">
       <div class="middle">

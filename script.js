@@ -62,3 +62,34 @@ window.addEventListener('scroll',()=>{
   text.style.bottom = `-${value}px`;
   man.style.height = `${window.innerHeight - value}px`
 })
+
+var buttons = document.querySelectorAll('.soundButton');
+
+buttons.forEach(function(button) {
+  button.addEventListener('click1', function() {
+    var soundFile = button.getAttribute('data-sound');
+    var audio = new Audio(soundFile);
+    audio.play();
+  });
+});
+buttons.forEach(function(button) {
+  button.addEventListener('click2', function() {
+    var soundFile = button.getAttribute('data-sound');
+    var audio = new Audio(soundFile);
+    audio.play();
+  });
+});
+buttons.forEach(function(button) {
+  button.addEventListener('click3', function() {
+    var soundFile = button.getAttribute('data-sound');
+    var audio = new Audio(soundFile);
+    audio.play();
+  });
+});
+buttons.forEach(function(button) {
+  button.addEventListener('click4', function() {
+    var soundFile = button.getAttribute('data-sound');
+    var audio = new Audio(soundFile);
+    audio.play();
+  });
+});
