@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Limitless Textures Home</title>
+  <title>Summit | Home</title>
   <meta content="Minecraft Reimagined" name="description">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Limitless Textures" property="og:title">
@@ -17,24 +17,33 @@
   <!-- Place favicon.ico in the root directory -->
   <link href="/css/normalize.css" rel="stylesheet">
   <link href="/css/main.css" rel="stylesheet">
-  <link href="/index-home.scss" rel="stylesheet">
+  <link href="/index-home.css" rel="stylesheet">
   <meta content="#fafafa" name="theme-color">
 </head>
 <body>
 <main>
-  <img alt="Minecraft" id="logo" src="/content/img/minecraft_title.png"/>
-  <div id="flashingtext">Minecraft Reimagined</div>
-    <button class="button singleplayer">Singleplayer</button>
-    <br>
-    <button class="button multiplayer">Multiplayer</button>
-    <br>
-    <button class="button button_small left" onclick="change()">Options</button>
-    <button class="button button_small right" onclick="quit();">Quit Game</button>
+  <section>
+    <img alt="Minecraft" id="logo" class="small_logo" src="/content/img/Summit.png"/>
+    <div id="flashingtext">Minecraft At Its Peak</div>
+      <button class="button singleplayer" style="visibility: hidden"><a href="/index.html">Singleplayer</a></button>
+      <button class="button singleplayer">Singleplayer</button>
+      <br>
+      <button class="button multiplayer">Multiplayer</button>
+      <br>
+      <button class="button button_small left" onclick="change()">Options</button>
+      <button class="button button_small right" onclick="quit();">Quit Game</button>
+  </section>
 
+  <section class="image2">
+
+    <h3>COMING SOON</h3>
+
+  </section>
     <footer class="bottom-div">
       <div class="middle">
         <button class="nobtn">
-          <p>©&nbsp;<span id="year"></span>&nbsp;Limitless Designs. All rights reserved.</p>
+          <p class="halfo">"Minecraft" is a trademark of Mojang. This site is not affiliated with Mojang or Microsoft.</p>
+          <p>©&nbsp;<span id="year"></span>&nbsp;Summit. All rights reserved.</p>
         </button>
       </div>
     </footer>
@@ -50,4 +59,5 @@
   <script src="/js/plugins.js"></script>
   <script src="/js/main.js"></script>
   <script src="/index.js"></script>
+  <script src="/transition.js"></script>
 </html>

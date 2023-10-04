@@ -125,16 +125,16 @@ html {
 }
 
 body {
-  background: #303030 url("/content/img/screenshot_2.png") repeat-x 0 0;
+  background: #303030 url("/content/img/MinecraftWeb-4.jpg") repeat-x 0 0;
   background-size: cover;
-  animation: MinecraftBackground 165s linear infinite;
   text-align: center;
   font-family: Minecraft, sans-serif;
   text-shadow: 0.2vw 0.2vw 0 #383838;
+  background-blend-mode: overlay;
 }
 
 main {
-  padding: 8% 30% 0 30%;
+  padding: 0 20% 0 20%;
 }
 
 img, main, div {
@@ -149,7 +149,6 @@ a {
 #logo {
   margin-top: 5%;
   margin-bottom: 5%;
-  width: 100%;
 }
 
 /* TODO: Make the flashing text scale down as more text is added */
@@ -175,7 +174,7 @@ a {
   padding: 10px 10px 15px;
   margin: 0 auto 2% auto;
   background: #7D7D7D url("/content/img/bgbtn.png") center repeat;
-  background-size: 100% 100%;
+  background-size: 100% 200%;
   color: #E0E0E0;
   font-size: 1.2vw;
   outline: 0.1vw solid #000;
@@ -190,14 +189,14 @@ a {
 
 .button:hover {
   background: rgba(112, 121, 170, 0.5) url("/content/img/bgbtn.png") center repeat;
-  background-size: 100% 100%;
+  background-size: 100% 200%;
   background-blend-mode: overlay;
   color: #FFFFA0;
 }
 
 .button:disabled, .button[disabled] {
   background: #272727 url("/content/img/bgbtn.png") center repeat;
-  background-size: 100% 100%;
+  background-size: 100% 200%;
   color: #A9A9A9;
 }
 
@@ -238,4 +237,13 @@ a {
 
 button {
   font-family: Minecraft, sans-serif;
+}
+
+.small_logo {
+  width: 50%;
+  height: auto;
+}
+
+.halfo {
+  opacity: 75%;
 }
