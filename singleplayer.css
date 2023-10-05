@@ -4,5 +4,5 @@ section .img2 {
   height: 100px;
   object-fit: contain;
   pointer-events: none;
-  filter: invert(100%)
+  filter: invert(100%);
 }
