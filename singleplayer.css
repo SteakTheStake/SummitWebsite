@@ -1,0 +1,8 @@
+section .img2 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  pointer-events: none;
+  filter: invert(100%)
+}
