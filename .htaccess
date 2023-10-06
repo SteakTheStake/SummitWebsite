@@ -384,6 +384,8 @@ AddDefaultCharset utf-8
 
 </IfModule>
 
+Redirect /discord.html https://discord.gg/vA6knJyq
+
 # ----------------------------------------------------------------------
 # | Forcing the `www.` at the beginning of URLs                        |
 # ----------------------------------------------------------------------
