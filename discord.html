@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Page Not Found</title>
+  <title>Loading Discord Invite</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style.css" rel="stylesheet">
+  <script crossorigin="anonymous" src="https://kit.fontawesome.com/cd4693caa2.js"></script>
   <style>
     * {
       line-height: 1.2;
@@ -59,31 +60,12 @@
 <body>
 <main>
   <section>
-    <h1 class="bold">404<br>Page Not Found</h1>
-    <p>Oops, that summit isn't on our map</p>
-    <audio controls style="visibility: hidden">
-      <source src="content/sounds/click.ogg" type="audio/ogg">
-    </audio>
-    <audio controls style="visibility: hidden">
-      <source src="content/sounds/click.ogg" type="audio/ogg">
-    </audio>
-    <button data-sound="click.ogg" class="button singleplayer soundButton" id="click1" style="visibility: hidden" onclick="setupClickEvent()">Singleplayer</button>
+    <i class="fa-brands fa-discord fa-fade fa-2xl"></i>
     <br>
-    <button data-sound="click.ogg" class="button multiplayer soundButton" id="click2" style="visibility: hidden" onclick="setupClickEvent()">Multiplayer</button>
+    <h1 class="bold fa-fade">Loading Discord Invite</h1>
     <br>
-    <button data-sound="click.ogg" class="button button_small left soundButton" id="click3" style="visibility: hidden" onclick="setupClickEvent()">Options</button>
-    <button data-sound="click.ogg" class="button button_small right soundButton" id="click4" style="visibility: hidden" onclick="setupClickEvent()">Quit Game</button>
-    <button data-sound="click.ogg" class="button singleplayer soundButton" id="click5" onclick="setupClickEvent()">Back To Title Screen</button>
+    <p class="fa-fade">Please be patient</p>
   </section>
-
-  <footer class="bottom-div">
-    <div class="middle">
-      <button class="nobtn">
-        <p class="halfo">"Minecraft" is a trademark of Mojang. This site is not affiliated with Mojang or Microsoft.</p>
-        <p>©&nbsp;<span id="year"></span>&nbsp;Summit. All rights reserved.</p>
-      </button>
-    </div>
-  </footer>
 </main>
 <div class="fullscreen-underlay">
   <div id="stars"></div>
@@ -91,9 +73,8 @@
   <div id="stars3"></div>
 </div>
 </body>
-<script>
-  document.getElementById("year").innerHTML = new Date().getFullYear();
-</script>
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script> $(document).ready(function() { var url = "https://discord.gg/vA6knJyq"; $(location).attr('href',url); }); </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
@@ -101,40 +82,4 @@
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script src="script.js"></script>
-<script>var sound = new Audio("content/sounds/click.ogg");
-
-function setupClickEvent(elementId, callback) {
-  document.getElementById(elementId).addEventListener("click", function() {
-    sound.play();
-    setTimeout(callback, 250);
-  });
-}
-
-function singleplayer() {
-  document.location.href = 'singleplayer.html';
-}
-
-function multiplayer() {
-  document.location.href = 'lol.html';
-}
-
-function options() {
-  document.location.href = 'lol.html';
-}
-
-function quit() {
-  document.location.href = 'lol.html';
-}
-
-function title() {
-  document.location.href = 'index.html';
-}
-
-// Setup the click events
-setupClickEvent("click1", singleplayer);
-setupClickEvent("click2", multiplayer);
-setupClickEvent("click3", options);
-setupClickEvent("click4", quit);
-setupClickEvent("click5", title);
-</script>
 </html>

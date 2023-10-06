@@ -44,6 +44,7 @@
     <br>
     <button data-sound="click.ogg" class="button button_small left soundButton" id="click3" onclick="setupClickEvent()">Options</button>
     <button data-sound="click.ogg" class="button button_small right soundButton" id="click4" onclick="setupClickEvent()">Quit Game</button>
+    <button data-sound="click.ogg" class="button button_small left float soundButton fa-brands fa-discord" id="click6" onclick="setupClickEvent()"></button>
 
   </section>
   <section class="image2">
@@ -109,11 +110,16 @@ function title() {
   document.location.href = 'index.html';
 }
 
+function redirect() {
+  document.location.href = 'discord.html';
+}
+
 // Setup the click events
 setupClickEvent("click1", singleplayer);
 setupClickEvent("click2", multiplayer);
 setupClickEvent("click3", options);
 setupClickEvent("click4", quit);
 setupClickEvent("click5", title);
+setupClickEvent("click6", redirect);
 </script>
 </html>

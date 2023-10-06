@@ -210,6 +210,17 @@ a {
   float: left;
 }
 
+.float {
+  padding: 10px 13px 15px;
+  margin: 0 auto 2% auto;
+  display: float;
+  z-index: 3;
+  position: absolute;
+  width: auto;
+  height: auto;
+  right: 81%;
+}
+
 .middle {
   position: relative;
   justify-content: center;
