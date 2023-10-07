@@ -14,7 +14,3 @@ deny from all
 
 SetEnv TZ America/Los_Angeles
 
-AuthType Basic
-AuthName "Patrons Only"
-AuthUserFile /patreon/.htpasswd
-Require valid-user
