@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{cd4693caa2, gsap, script, style}" />
+    <file url="PROJECT" libraries="{@widgetbot, cd4693caa2, gsap, jquery-1.6.2}" />
   </component>
 </project>
