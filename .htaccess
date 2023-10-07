@@ -4,6 +4,8 @@ RewriteRule ^content-([0-9]+).html$ content.php?id=$1
 
 ErrorDocument 404 404.html
 
+Redirect permanent index.html home.html
+
 DirectoryIndex home.html
 
 SetEnv TZ Europe/London
