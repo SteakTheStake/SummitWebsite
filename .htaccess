@@ -8,8 +8,6 @@ Redirect permanent /index.html /home.html
 
 DirectoryIndex /home.html
 
-SetEnv TZ Europe/London
-
 deny from all
 
 SetEnv TZ America/Los_Angeles

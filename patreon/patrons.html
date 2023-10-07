@@ -19,6 +19,13 @@
   <meta content="#fafafa" name="theme-color">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8880990794053898"
           crossorigin="anonymous"></script>
+  <!-- Discord -->
+  <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+      server: '1159871598644445266', // SummitMC
+      channel: '1159878139569258517' // #⛺┃general
+    })
+  </script>
 </head>
 
 <body>
@@ -27,7 +34,7 @@
     <img class="img2" src="../content/img/summit_logo.svg">
   </section>
   <section>
-    <h1 class="titletxt">Welcome to The Summit</h1>
+    <h1 class="titletxt">Welcome to Summit</h1>
     <p class="subtitletxt">
       We're  so glad you're here!
     </p>
@@ -37,6 +44,10 @@
     <audio controls style="visibility: hidden">
       <source src="../content/sounds/click.ogg" type="audio/ogg">
     </audio>
+    <div>
+      <h1 class="titletxt">Download The Summit Resource Pack</h1>
+      <button data-sound="click.ogg" class="button singleplayer soundButton" id="click6" onclick="setupClickEvent()">Download</button>
+    </div>
   </section>
   <footer class="bottom-div">
     <button data-sound="click.ogg" class="button singleplayer soundButton" id="click5" onclick="setupClickEvent()">Back To Title Screen</button>
@@ -79,6 +90,11 @@
     document.location.href = '../home.html';
   }
 
+  function download() {
+    document.location.href = "/summit/versions/newest/Summit-64x.zip";
+  }
+
   setupClickEvent("click5", title);
+  setupClickEvent("click6", download);
 </script>
 </html>

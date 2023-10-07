@@ -48,9 +48,9 @@
     </audio>
     <button data-sound="click.ogg" class="button singleplayer soundButton" id="click1" onclick="setupClickEvent()">Free Area</button>
     <br>
-    <button data-sound="click.ogg" class="button multiplayer soundButton" id="click2" onclick="multiplayerClickEvent()">Connect with Patreon</button>
+    <button data-sound="click.ogg" class="button multiplayer soundButton" id="click7" onclick="startMultiplayer()">Patron Area</button>
     <br>
-    <button data-sound="click.ogg" class="button button_small left soundButton" id="click3" onclick="setupClickEvent()">Options</button>
+    <button data-sound="click.ogg" class="button button_small left soundButton" id="click2" onclick="setupClickEvent()">Connect With Patreon</button>
     <button data-sound="click.ogg" class="button button_small right soundButton" id="click4" onclick="setupClickEvent()">Quit</button>
   </section>
   <section class="image2">
@@ -87,7 +87,6 @@
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script src="script.js"></script>
-<script src="multiplayer.js"></script>
 <script>var sound = new Audio("content/sounds/click.ogg");
 
 function setupClickEvent(elementId, callback) {
@@ -126,16 +125,21 @@ function multiplayerClickEvent(elementId, callback) {
 }
 
 function startMultiplayer() {
-  // Redirect to start the Patreon OAuth flow.
-  window.location.href = "/start-patreon-auth";
+  window.location.href = "/patreon/patrons.html";
 }
 
-multiplayerClickEvent("click2", startMultiplayer);
+function loginPatreon() {
+  // Redirect to start the Patreon OAuth flow.
+  window.location.href = "https://www.patreon.com/oauth2/authorize?response_type=code&client_id=yOXZgIoKBJudCRln5wj6CTz_HmqNCwe3Th3O_8G8XR0fSsQg5fsQox496NWERjZr&redirect_uri=https://summitmc.xyz/patreon/patrons.html";
+}
+
 
 
 setupClickEvent("click1", singleplayer);
+multiplayerClickEvent("click2", startMultiplayer);
 setupClickEvent("click3", options);
 setupClickEvent("click4", quit);
 setupClickEvent("click5", title);
+setupClickEvent("click7", loginPatreon);
 </script>
 </html>
