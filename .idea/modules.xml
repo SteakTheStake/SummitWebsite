@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../LiimitlessWebsite.iml" filepath="$PROJECT_DIR$/../LiimitlessWebsite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../summit-website.iml" filepath="$PROJECT_DIR$/../summit-website.iml" />
     </modules>
   </component>
 </project>
