@@ -27,6 +27,13 @@
   <meta content="#fafafa" name="theme-color">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8880990794053898"
           crossorigin="anonymous"></script>
+  <!-- Discord -->
+  <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+      server: '1159871598644445266', // SummitMC
+      channel: '1159878139569258517' // #⛺┃general
+    })
+  </script>
 </head>
 <body>
 <main>
@@ -45,7 +52,6 @@
     <br>
     <button data-sound="click.ogg" class="button button_small left soundButton" id="click3" onclick="setupClickEvent()">Options</button>
     <button data-sound="click.ogg" class="button button_small right soundButton" id="click4" onclick="setupClickEvent()">Quit Game</button>
-    <button data-sound="click.ogg" class="button button_small left float soundButton fa-brands fa-discord" id="click6" onclick="setupClickEvent()"></button>
   </section>
   <section class="image2">
     <h3>COMING SOON</h3>
@@ -110,9 +116,6 @@ function title() {
   document.location.href = 'home.html';
 }
 
-function discord() {
-  document.location.href = 'discord.html';
-}
 
 setupClickEvent("click1", singleplayer);
 setupClickEvent("click2", multiplayer);

@@ -17,6 +17,7 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
+    "crate": "^0.0.0",
     "gsap": "^3.12.2",
     "jquery": "^3.7.1",
     "normalize.css": "^8.0.1",
