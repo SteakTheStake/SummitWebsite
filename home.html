@@ -113,6 +113,25 @@ function title() {
   document.location.href = './home.html';
 }
 
+function soundPlay() {
+  // Assuming you have a sound variable defined elsewhere.
+  sound.play();
+}
+
+function multiplayerClickEvent(elementId, callback) {
+  document.getElementById(elementId).addEventListener("click", function() {
+    soundPlay();
+    setTimeout(callback, 250);
+  });
+}
+
+function startMultiplayer() {
+  // Redirect to start the Patreon OAuth flow.
+  window.location.href = "/start-patreon-auth";
+}
+
+multiplayerClickEvent("click2", startMultiplayer);
+
 
 setupClickEvent("click1", singleplayer);
 setupClickEvent("click3", options);

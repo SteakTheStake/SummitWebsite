@@ -1,9 +1,3 @@
-function multiplayerClickEvent(elementId, callback) {
-  document.getElementById(elementId).addEventListener("click", function() {
-    sound.play();
-    setTimeout(callback, 250);
-  });
-}
 function multiplayer() {
   const express = require('express');
   const session = require('express-session');
@@ -38,7 +32,7 @@ function multiplayer() {
   });
 
 // Endpoint to start the Patreon OAuth flow
-  app.get('/patreon/patrons.html', (req, res) => {
+  app.get('/start-patreon-auth', (req, res) => {
     const state = Math.random().toString(36).substr(2, 10);
     req.session.patreonState = state; // Store the state in session
 
@@ -86,5 +80,3 @@ function multiplayer() {
   });
 
 }
-
-multiplayerClickEvent("click2", multiplayer);
