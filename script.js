@@ -10,23 +10,23 @@ function setupClickEvent(elementId, callback) {
 }
 
 function singleplayer() {
-  document.location.href = 'singleplayer.html';
+  document.location.href = 'workspace/singleplayer.html';
 }
 
 function options() {
-  document.location.href = '404.html';
+  document.location.href = 'workspace/404.html';
 }
 
 function quit() {
-  document.location.href = 'home.html';
+  document.location.href = 'workspace/home.html';
 }
 
 function title() {
-  document.location.href = 'home.html';
+  document.location.href = 'workspace/home.html';
 }
 
 function startMultiplayer() {
-  window.location.href = "patreon-auth.html";
+  window.location.href = "workspace/patreon-auth.html";
 }
 
 setupClickEvent("click7");
