@@ -17,4 +17,3 @@ DirectoryIndex /home.html
 deny from all
 
 SetEnv TZ America/Los_Angeles
-

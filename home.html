@@ -66,51 +66,10 @@
 
 <!-- Scripts -->
 <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3'></script>
-<script>
-  document.getElementById("year").innerHTML = new Date().getFullYear();
-</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script src="script.js"></script>
-<script>
-  var sound = new Audio("content/sounds/click.ogg");
-
-  function setupClickEvent(elementId, callback) {
-    document.getElementById(elementId).addEventListener("click", function () {
-      sound.play();
-      if (callback) {
-        setTimeout(callback, 250);
-      }
-    });
-  }
-
-  function singleplayer() {
-    document.location.href = 'singleplayer.html';
-  }
-
-  function options() {
-    document.location.href = '404.html';
-  }
-
-  function quit() {
-    document.location.href = 'home.html';
-  }
-
-  function title() {
-    document.location.href = 'home.html';
-  }
-
-  function startMultiplayer() {
-    window.location.href = "patreon-auth.html";
-  }
-
-  setupClickEvent("click7");
-  setupClickEvent("click4", quit);
-  setupClickEvent("click1", singleplayer);
-  setupClickEvent("click2", startMultiplayer);
-</script>
 </body>
-
 </html>
