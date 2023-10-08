@@ -35,9 +35,3 @@ setupClickEvent("click1", singleplayer);
 setupClickEvent("click2", startMultiplayer);
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
-
-
-new Crate({
-  server: '1159871598644445266', // SummitMC
-  channel: '1159878139569258517' // #⛺┃general
-})
