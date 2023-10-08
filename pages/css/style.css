@@ -175,7 +175,7 @@ a {
 .button {
   padding: 10px 10px 15px;
   margin: 0 auto 2% auto;
-  background: #7D7D7D url("content/img/bgbtn.png") center repeat;
+  background: #7D7D7D url("../content/img/bgbtn.png") center repeat;
   background-size: 100% 200%;
   color: #E0E0E0;
   font-size: 1.2vw;
@@ -190,14 +190,14 @@ a {
 }
 
 .button:hover {
-  background: rgba(112, 121, 170, 0.5) url("content/img/bgbtn.png") center repeat;
+  background: rgba(112, 121, 170, 0.5) url("../content/img/bgbtn.png") center repeat;
   background-size: 100% 200%;
   background-blend-mode: overlay;
   color: #FFFFA0;
 }
 
 .button:disabled, .button[disabled] {
-  background: #272727 url("content/img/bgbtn.png") center repeat;
+  background: #272727 url("../content/img/bgbtn.png") center repeat;
   background-size: 100% 200%;
   color: #A9A9A9;
 }

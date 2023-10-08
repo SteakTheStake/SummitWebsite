@@ -1,0 +1,14 @@
+{
+  "short_name": "Summit",
+  "name": "SummitMC",
+  "icons": [{
+    "src": "content/favicon/android-chrome-192x192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "home.html",
+  "background_color": "#1b2735",
+  "theme_color": "#4874c6",
+  "display": "standalone",
+  "scope": "/app/"
+}

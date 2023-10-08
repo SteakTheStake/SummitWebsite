@@ -2,31 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Patrons Area</title>
-  <meta content="Minecraft Reimagined" name="description">
+  <title>Summit | Patrons Area</title>
+  <meta content="Minecraft At Its Peak" name="description">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta content="Limitless Textures" property="og:title">
-  <meta content="Minecraft Reimagined" property="og:type">
-  <meta content="http://summitmc.xyz/" property="og:url">
-  <meta content="" property="og:image">
-  <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-  <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-  <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-  <link href="site.webmanifest" rel="manifest">
+
+  <!-- Discord Meta Tags -->
+  <meta content="https://summitmc.xyz/" property="og:url">
+  <meta content="https://i.imgur.com/mUyE7Mw.png" property="og:image">
+  <meta content="Summit" property="og:title">
+  <meta content="Minecraft At Its Peak" property="og:description">
+  <meta content="#4874c6" data-react-helmet="true" name="theme-color">
+  <meta name="twitter:card" content="https://i.imgur.com/xtR2Gs8.jpg">
+
+  <!-- Favicons -->
+  <link href="content/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="content/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="content/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Stylesheets -->
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/singleplayer.css" rel="stylesheet">
+
+  <!-- Scripts -->
   <script crossorigin="anonymous" src="https://kit.fontawesome.com/cd4693caa2.js"></script>
-  <link href="singleplayer.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <meta content="#fafafa" name="theme-color">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8880990794053898"
-          crossorigin="anonymous"></script>
-  <!-- Discord -->
-  <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer></script>
 </head>
 
 <body>
 <main>
   <section>
-    <img class="img2" src="content/img/summit_logo.svg">
+    <img class="img2" src="content/img/summit-logo.svg">
   </section>
   <section>
     <h1 class="titletxt">Welcome to Summit</h1>
@@ -69,8 +76,8 @@
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-<script src="script.js"></script>
-<script src="singleplayer.js"></script>
+<script src="js/script.js"></script>
+<script src="js/singleplayer.js"></script>
 <script>
   var sound = new Audio("content/sounds/click.ogg");
 
@@ -86,7 +93,7 @@
   }
 
   function download() {
-    document.location.href = "/summit/versions/newest/Summit-64x.zip";
+    document.location.href = "../summit/versions/newest/Summit-64x.zip";
   }
 
   setupClickEvent("click5", title);

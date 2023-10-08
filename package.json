@@ -6,8 +6,8 @@
   "license": "ISC",
   "author": "",
   "scripts": {
-    "build": "parcel build home.html",
-    "dev": "parcel home.html --open",
+    "build": "parcel build pages/home.html",
+    "dev": "parcel pages/home.html --open",
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,7 +29,7 @@
     "three-gpu-pathtracer": "^0.0.16",
     "uuid": "^9.0.1"
   },
-  "main": "script.js",
+  "main": "pages/js/script.js",
   "directories": {
     "doc": "doc"
   }
