@@ -26,10 +26,14 @@ function title() {
 }
 
 function startMultiplayer() {
-  window.location.href = "patreon-auth.html";
+  window.location.href = "vault.html";
 }
 
-setupClickEvent("click7");
+function connect() {
+  window.location.href = "https://www.patreon.com/oauth2/authorize?response_type=code&client_id=yOXZgIoKBJudCRln5wj6CTz_HmqNCwe3Th3O_8G8XR0fSsQg5fsQox496NWERjZr&redirect_uri=https://summitmc.xyz/pages/vault.html";
+}
+
+setupClickEvent("click7", connect);
 setupClickEvent("click4", quit);
 setupClickEvent("click1", singleplayer);
 setupClickEvent("click2", startMultiplayer);
