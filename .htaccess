@@ -10,11 +10,13 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
 RewriteRule (.*)$ /$1/ [R=301,L]
 
-ErrorDocument 404 /404.html
+ErrorDocument 404 pages/404.html
 
-Redirect permanent /index.html /home.html
+Redirect permanent index.html pages/home.html
 
-DirectoryIndex /home.html
+DirectoryIndex index.html
+
+Options -Indexes
 
 deny from all
 
