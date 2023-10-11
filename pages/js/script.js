@@ -18,11 +18,11 @@ function options() {
 }
 
 function quit() {
-  document.location.href = 'home.html';
+  document.location.href = '../home.html';
 }
 
 function title() {
-  document.location.href = 'home.html';
+  document.location.href = '../home.html';
 }
 
 function startMultiplayer() {
