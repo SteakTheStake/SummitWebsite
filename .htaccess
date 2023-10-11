@@ -28,3 +28,5 @@ SetEnv TZ America/Los_Angeles
 ServerSignature Off
 
 Options -Indexes
+
+Options -ExecCGI
