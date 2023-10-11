@@ -43,6 +43,9 @@
     <audio controls style="visibility: hidden">
       <source src="content/sounds/click.ogg" type="audio/ogg">
     </audio>
+
+    <button data-sound="click.ogg" class="patreonbutton singleplayer soundButton" id="click8" onclick="setupClickEvent()">Become a Patron</button>
+
     <audio controls style="visibility: hidden">
       <source src="content/sounds/click.ogg" type="audio/ogg">
     </audio>
@@ -88,7 +91,12 @@
       document.location.href = '../pages/home.html';
     }
 
+    function patron() {
+      document.location.href = 'redir-patreon.html';
+    }
+
   setupClickEvent("click5", title);
+  setupClickEvent("click8", patron);
 </script>
 <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
   new Crate({
