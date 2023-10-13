@@ -292,7 +292,7 @@ button {
   z-index: -1;
   height: 100vh;
   width: 100vw;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background: radial-gradient(ellipse at bottom, #002525 0%, #0a1010 100%);
   overflow: hidden;
 }
 
